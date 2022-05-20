@@ -8,9 +8,14 @@ Class {
 }
 
 { #category : #initialization }
+STCMissingPositiveTest >> createSolver [
+	^STCMissingPositiveNaive new
+]
+
+{ #category : #initialization }
 STCMissingPositiveTest >> setUp [
 	super setUp.
-	solver := STCMissingPositive new.
+	solver := self createSolver.
 ]
 
 { #category : #initialization }

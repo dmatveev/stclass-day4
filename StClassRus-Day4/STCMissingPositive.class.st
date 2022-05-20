@@ -6,5 +6,5 @@ Class {
 
 { #category : #'as yet unclassified' }
 STCMissingPositive >> solve: anArray [
-	^0
+	self subclassResponsibility 
 ]

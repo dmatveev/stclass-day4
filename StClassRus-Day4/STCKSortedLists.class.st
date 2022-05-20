@@ -6,5 +6,5 @@ Class {
 
 { #category : #'as yet unclassified' }
 STCKSortedLists >> solve: anArrayOfLists [
-	^ nil
+	self subclassResponsibility
 ]

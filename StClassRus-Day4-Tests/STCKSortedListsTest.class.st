@@ -8,6 +8,11 @@ Class {
 }
 
 { #category : #initialization }
+STCKSortedListsTest >> createSolver [
+	^STCKSortedListsNaive new
+]
+
+{ #category : #initialization }
 STCKSortedListsTest >> prepare: anArrayOfLists [
 	^ anArrayOfLists collect: [ :list | LinkedList withAll: list ]
 ]
@@ -15,7 +20,7 @@ STCKSortedListsTest >> prepare: anArrayOfLists [
 { #category : #initialization }
 STCKSortedListsTest >> setUp [
 	super setUp.
-	solver := STCKSortedLists new.
+	solver := self createSolver.
 	
 ]
 
