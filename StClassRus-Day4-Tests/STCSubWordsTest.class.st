@@ -14,14 +14,14 @@ STCSubWordsTest >> setUp [
 ]
 
 { #category : #initialization }
-STCSubWordsTest >> testLC1 [
+STCSubWordsTest >> testSolveWithLC1 [
 	self
 		assert: (solver solve: 'barfoothefoobarman' with: #('foo' 'bar')) asSet
-		equals: #(0 9) asSet
+		equals: #(1 10) asSet
 ]
 
 { #category : #initialization }
-STCSubWordsTest >> testLC2 [
+STCSubWordsTest >> testSolveWithLC2 [
 	self
 		assert: (solver
 			solve: 'wordgoodgoodgoodbestword'
@@ -30,10 +30,10 @@ STCSubWordsTest >> testLC2 [
 ]
 
 { #category : #initialization }
-STCSubWordsTest >> testLC3 [
+STCSubWordsTest >> testSolveWithLC3 [
 	self
 		assert: (solver
 			solve: 'barfoofoobarthefoobarman'
 			with: #('bar' 'foo' 'the')) asSet
-		equals: #() asSet
+		equals: #(7 10 13) asSet
 ]
